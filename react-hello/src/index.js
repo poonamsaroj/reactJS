@@ -3,7 +3,18 @@ import ReactDOM from 'react-dom';
 
 function Helloworld(){
     return (
-        <h1>Hello World</h1>
+        <React.Fragment>
+            <h1>Hello World</h1>
+            <Helloworldbycreateelement />
+        </React.Fragment>
+    );
+}
+
+function Helloworldbycreateelement(){
+    return React.createElement(
+        'h1',
+        {id: 'abc'},
+        'Hello World In Create Element'        
     );
 }
 
