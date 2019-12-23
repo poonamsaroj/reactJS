@@ -1,0 +1,11 @@
+.address-label{
+    background-color: #f8f8f5;
+    /* width: 100%; */
+    padding: 1em;
+    margin: 1em;
+}
+
+.address-label span{
+    font-style: 'Arial, Helvetica, sans-serif';
+    display: block;
+}
