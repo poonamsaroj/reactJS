@@ -1,11 +1,16 @@
-.address-label{
-    /* background-color: #f8f8f5; */
+.container{
+    position: relative;
+    border: 2px solid rgb(236, 234, 234);
     padding: 1em;
     margin: 1em;
     width: 60%;
     max-width: 100%;
+}
+
+.address-label{
+    /* background-color: #f8f8f5; */
+    /* position: relative; */
     /* height: 400px; */
-    border: 2px solid rgb(236, 234, 234);
 }
 
 .address-label .to-person{
@@ -26,4 +31,23 @@
 .address-label div span{
     font-style: 'Arial, Helvetica, sans-serif';
     display: block;
+}
+.stamp-class{
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(204, 202, 202);
+    float: right;
+    position: relative;
+    /* height: 100px; */
+}
+.stamp-class span{
+    padding: 1.3em 0.5em;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    color: rgb(155, 155, 155);
+    position: absolute;
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Safari 3-8 */
+    transform: rotate(-30deg);
 }

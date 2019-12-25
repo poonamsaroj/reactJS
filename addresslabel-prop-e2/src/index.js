@@ -6,25 +6,40 @@ import './index.css';
 const AddressLabel = ({person}) => {
     // console.log({person});
     return (
+        <React.Fragment>
             <Envelope person={person}/>
+        </React.Fragment>
     );
 }
     
 const Envelope = ({person}) => {
-    // console.log({person});
     const {toPerson, fromPerson} = person;
     return (
-        <div className="address-label">
-            <div className="to-person">
-                <span>{toPerson.name}</span>
-                <span>{toPerson.address1}</span>
-                <span>{toPerson.address2}</span>
-            </div> 
-            <div className="from-person">
-                <span>{fromPerson.name}</span>
-                <span>{fromPerson.address1}</span>
-                <span>{fromPerson.address2}</span>
-            </div> 
+        <div className="container">
+            <Stamp />
+            <div className="address-label">
+                <div className="to-person">
+                    <span>{toPerson.name}</span>
+                    <span>{toPerson.address1}</span>
+                    <span>{toPerson.address2}</span>
+                </div> 
+                <div className="from-person">
+                    <span>{fromPerson.name}</span>
+                    <span>{fromPerson.address1}</span>
+                    <span>{fromPerson.address2}</span>
+                </div> 
+            </div>
+        </div>
+    )
+}
+
+const Stamp = () => {
+    // const {stampName} = stamp;
+    return (
+        <div className="stamp-class">
+            <span className="stamp-style">
+                STAMP
+            </span>
         </div>
     )
 }
