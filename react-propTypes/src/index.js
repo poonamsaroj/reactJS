@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 import './index.css';
 
 // Props stands for Properties
-/* Tweet => Parent
-            Avatar
-            Author
-            Time
-            Message
-            Icons
+/* 
+    https://reactjs.org/docs/typechecking-with-proptypes.html
+        PropTypes.array,
+        PropTypes.bool,
+        PropTypes.func,
+        PropTypes.number,
+        PropTypes.object,
+        PropTypes.string,
+        PropTypes.symbol,
 */
 
 // Destructed data is passed in every child component for implementation
@@ -18,6 +22,10 @@ const Avatar = ({ hash }) => {
     return <img src={url}
     className="avatar"
     alt="avatar" />
+}
+
+Avatar.propTypes = {
+    hash: PropTypes.string
 }
 
 const Author = ({ author }) => {
@@ -30,9 +38,17 @@ const Author = ({ author }) => {
     );
 };
 
+Author.propTypes = {
+    author: PropTypes.shape({
+        name: PropTypes.string,
+        handle: PropTypes.string
+    })
+}
+
 const Time = ({ timestamp }) => (
         <span className="time">{moment(timestamp).fromNow()}</span>
 ) 
+
 
 const Message = ({ text }) => (<div className="message"> {text} </div>);
 
